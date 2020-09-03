@@ -1,0 +1,12 @@
+version: "2"
+services:
+  app:
+    container_name: portal-front
+    restart: always
+    build: .
+    ports:
+      - '3002:3000'
+    volumes:
+       - /etc/localtime:/etc/localtime:ro
+       - /etc/timezone:/etc/timezone
+       -  /Dockers/portal-front/.env
